@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Two-Factor Authentication</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="center-only">
+    <form class="box" method="POST">
+        <h2>Enter OTP</h2>
+        <input type="text" name="otp" placeholder="6-digit code" required>
+        <button type="submit">Continue</button>
+
+        {% if error %}
+        <p class="error">{{ error }}</p>
+        {% endif %}
+    </form>
+</div>
+</body>
+</html>
